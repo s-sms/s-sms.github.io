@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W64WB49M');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>민원 SMS 간편 발송</title>
@@ -23,6 +30,10 @@
     </style>
 </head>
 <body class="flex flex-col items-center min-h-screen">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W64WB49M"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div class="w-full max-w-md bg-white min-h-screen shadow-xl">
         <!-- 헤더 영역 -->
@@ -36,8 +47,11 @@
         <!-- 메시지 목록 영역 -->
         <div class="p-4 space-y-4" id="message-list">
             
-            <!-- 옵션 1: 기본 문의 -->
-            <div class="message-card relative block border-2 border-gray-200 rounded-xl p-5 cursor-pointer hover:border-blue-300 transition-all bg-white group" onclick="sendSMS(this.querySelector('.msg-value').value)">
+            <!-- 옵션 1: 도환중1구역 안전통로 -->
+            <!-- [수정됨] data-card-id="safety_path" 추가 -->
+            <div class="message-card relative block border-2 border-gray-200 rounded-xl p-5 cursor-pointer hover:border-blue-300 transition-all bg-white group" 
+                 data-card-id="safety_path"
+                 onclick="sendSMS(this.querySelector('.msg-value').value)">
                 <input type="hidden" class="msg-value" value="[도환중1구역 공사 안전통로 요청]
 도환중1구역 공사현장 주변 하늘채 1단지 앞에 낙하물 방지 안전통로 설치바랍니다!!
 다른구역은 설치되어 있는데 1단지 구역은 설치되지 않았습니다!!" checked>
@@ -49,23 +63,33 @@
                 <p class="text-gray-800 font-medium leading-relaxed text-sm whitespace-pre-line">[도환중1구역 공사 안전통로 요청]
 도환중1구역 공사현장 주변 하늘채 1단지 앞에 낙하물 방지 안전통로 설치바랍니다!!
 다른구역은 설치되어 있는데 1단지 구역은 설치되지 않았습니다!!
-                    </p>
-                </div>
-                <div class="message-card relative block border-2 border-gray-200 rounded-xl p-5 cursor-pointer hover:border-blue-300 transition-all bg-white group" onclick="sendSMS(this.querySelector('.msg-value').value)">
-                    <input type="hidden" class="msg-value" value="[효성중공업 소음분진 대책 요청]
+                </p>
+            </div>
+
+            <!-- 옵션 2: 효성중공업 소음분진 -->
+            <!-- [수정됨] data-card-id="noise_dust" 추가 -->
+            <div class="message-card relative block border-2 border-gray-200 rounded-xl p-5 cursor-pointer hover:border-blue-300 transition-all bg-white group" 
+                 data-card-id="noise_dust"
+                 onclick="sendSMS(this.querySelector('.msg-value').value)">
+                <input type="hidden" class="msg-value" value="[효성중공업 소음분진 대책 요청]
 효성중공업 현장 소음분진이 대책이 실행되지 않는것 같습니다!!
 실행 점검 바랍니다!!" checked>
     
-                    <div class="flex items-start justify-between mb-2">
-                        <span class="inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded">효성중공업 소음분진 대책 요청</span>
-                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-blue-500 transition-colors"></i>
-                    </div>
-                    <p class="text-gray-800 font-medium leading-relaxed text-sm whitespace-pre-line">[효성중공업 소음분진 대책 요청]
+                <div class="flex items-start justify-between mb-2">
+                    <span class="inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded">효성중공업 소음분진 대책 요청</span>
+                    <i class="fas fa-chevron-right text-gray-300 group-hover:text-blue-500 transition-colors"></i>
+                </div>
+                <p class="text-gray-800 font-medium leading-relaxed text-sm whitespace-pre-line">[효성중공업 소음분진 대책 요청]
 효성중공업 현장 소음분진이 대책이 실행되지 않는것 같습니다!!
 실행 점검 바랍니다!!
-                    </p>
-                    </div>
-                            <div class="message-card relative block border-2 border-gray-200 rounded-xl p-5 cursor-pointer hover:border-blue-300 transition-all bg-white group" onclick="sendSMS(this.querySelector('.msg-value').value)">
+                </p>
+            </div>
+
+            <!-- 옵션 3: 효성중공업 주말 공사 -->
+            <!-- [수정됨] data-card-id="weekend_work" 추가 -->
+            <div class="message-card relative block border-2 border-gray-200 rounded-xl p-5 cursor-pointer hover:border-blue-300 transition-all bg-white group" 
+                 data-card-id="weekend_work"
+                 onclick="sendSMS(this.querySelector('.msg-value').value)">
                 <input type="hidden" class="msg-value" value="[도환중1구역 효성중공업 주말 공사]
 도환중1구역 효성중공업이 토요일 주말에도 지속적인 공사로 주민 휴식이 불편합니다." checked>
 
@@ -75,33 +99,12 @@
                 </div>
                 <p class="text-gray-800 font-medium leading-relaxed text-sm whitespace-pre-line">[도환중1구역 효성중공업 주말 공사]
 도환중1구역 효성중공업이 토요일 주말에도 지속적인 공사로 주민 휴식이 불편합니다. 
-                    </p>
-                </div>
-            <!-- 옵션 2: 예약 요청
-            <div class="message-card relative block border-2 border-gray-200 rounded-xl p-5 cursor-pointer hover:border-blue-300 transition-all bg-white group" onclick="sendSMS(this.querySelector('.msg-value').value)">
-                <input type="hidden" class="msg-value" value="[전선 지중화 주민 민원]
-중앙동 하늘채·힐스테이트·해링턴 일대는 전선 지중화가 이루어지지 않아, 공동주택에서 정전 사고 및 전기 설비 파손 피해가 반복적으로 발생하고 있습니다.
-전기 사고로 인해 수많은 세대가 불편을 겪고 있으며, 주민 안전까지 위협받는 상황입니다.
-                
-성남시가 중앙동 주민을 더 이상 외면하지 않는다면, 공동주택 밀집 지역인 중앙동에 대해 즉각적인 전선 지중화 대책을 마련해야 합니다.
-                
-주민의 안전과 생활권 보호를 위해 조속한 조치를 강력히 요구합니다.">
-                    <div class="flex items-start justify-between mb-2">
-                        <span class="inline-block px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">전선 지중화 요청</span>
-                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-blue-500 transition-colors"></i>
-                    </div>
-                    <p class="text-gray-800 font-medium leading-relaxed text-sm whitespace-pre-line">[전선 지중화 주민 민원]
-중앙동 하늘채·힐스테이트·해링턴 일대는 전선 지중화가 이루어지지 않아, 공동주택에서 정전 사고 및 전기 설비 파손 피해가 반복적으로 발생하고 있습니다.
-전기 사고로 인해 수많은 세대가 불편을 겪고 있으며, 주민 안전까지 위협받는 상황입니다.
+                </p>
+            </div>
 
-성남시가 중앙동 주민을 더 이상 외면하지 않는다면, 공동주택 밀집 지역인 중앙동에 대해 즉각적인 전선 지중화 대책을 마련해야 합니다.
-
-주민의 안전과 생활권 보호를 위해 조속한 조치를 강력히 요구합니다.
-                    </p>
-            </div> -->
         </div> 
 
-        <!-- 하단 안내 문구 (버튼 대신 추가) -->
+        <!-- 하단 안내 문구 -->
         <div class="p-6 text-center text-gray-400 text-xs">
             <p>박스를 누르면 문자 앱이 자동으로 실행됩니다.</p>
         </div>
@@ -113,7 +116,7 @@
         // [개발자 설정 구간]
         // ==========================================
         
-        // 수신자 전화번호 (하이픈 없이 입력 권장)
+        // 수신자 전화번호
         const RECIPIENT_NUMBER = "01059200184"; 
 
         // ==========================================
@@ -136,6 +139,29 @@
 
             window.location.href = url;
         }
+    </script>
+
+    <!-- [수정됨] 통계 추적 스크립트 (GTM dataLayer 방식) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var cards = document.querySelectorAll('.message-card');
+        
+            cards.forEach(function (card) {
+                card.addEventListener('click', function () {
+                    // HTML에 추가한 data-card-id 값을 가져옴
+                    var cardId = card.getAttribute('data-card-id') || 'unknown';
+            
+                    // GTM 데이터 레이어로 이벤트 전송
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'sms_click',     // 이벤트 이름
+                        'event_label': cardId     // 클릭한 카드 ID (safety_path, noise_dust 등)
+                    });
+
+                    // console.log('Event pushed:', cardId); // 디버깅용 (필요시 주석 해제)
+                });
+            });
+        });
     </script>
 </body>
 </html>
