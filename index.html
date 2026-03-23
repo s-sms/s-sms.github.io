@@ -51,34 +51,30 @@
             <!-- 옵션 1: 도환중1구역 안전통로 -->
             <!-- [수정됨] data-card-id="safety_path" 추가 -->
             <div class="message-card relative block border-2 border-gray-200 rounded-xl p-5 cursor-pointer hover:border-blue-300 transition-all bg-white group" 
-                 data-card-id="road_repair"
+                 data-card-id="safety_path"
                  onclick="sendSMS(this.querySelector('.msg-value').value)">
-                <input type="hidden" class="msg-value" value="[도환 중1구역 도로 및 보행로 파손 복구 요청]
-도환 중1구역 건설 현장 인근 인도와 차도 파손이 심각 합니다.
-보행시 발이 걸려 넘어질수 있고
-주변 도로의 파손으로 차량 피해가 우려됩니다!!
-적극적인 복구 바랍니다!!!!" checked>
+                <input type="hidden" class="msg-value" value="[도환 중1구역 보행 안전 확보 요청]
+도환 중1구역 공사 차량의 신호위반, 코너 과속등 난폭 운전으로 보행 안전이 위협받고 있습니다!!
+성호시장 사거리에 신호수를 추가 배치하여 보행자 안전을 확보해 주시기 바랍니다!!" checked>
 
                 <div class="flex items-start justify-between mb-2">
-                    <span class="inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded">도환 중1구역 도로 및 보행로 파손 복구 요청</span>
+                    <span class="inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded">도환 중1구역 보행 안전 확보 요청</span>
                     <i class="fas fa-chevron-right text-gray-300 group-hover:text-blue-500 transition-colors"></i>
                 </div>
-                <p class="text-gray-800 font-medium leading-relaxed text-sm whitespace-pre-line">[도환 중1구역 도로 및 보행로 파손 복구 요청]
-                    도환 중1구역 건설 현장 인근 인도와 차도 파손이 심각 합니다.
-                    보행시 발이 걸려 넘어질수 있고
-                    주변 도로의 파손으로 차량 피해가 우려됩니다!!
-                    적극적인 복구 바랍니다!!!!
+                <p class="text-gray-800 font-medium leading-relaxed text-sm whitespace-pre-line">[도환 중1구역 보행 안전 확보 요청]
+                    도환 중1구역 공사 차량의 신호위반, 코너 과속등 난폭 운전으로 보행 안전이 위협받고 있습니다!!
+                    성호시장 사거리에 신호수를 추가 배치하여 보행자 안전을 확보해 주시기 바랍니다!!
                 </p>
             </div>
 
             <!-- 옵션 2: 효성중공업 소음분진 -->
             <!-- [수정됨] data-card-id="noise_dust" 추가 -->
             <div class="message-card relative block border-2 border-gray-200 rounded-xl p-5 cursor-pointer hover:border-blue-300 transition-all bg-white group" 
-                 data-card-id="traffic_problem"
+                 data-card-id="traffic_problem_fix"
                  onclick="sendSMS(this.querySelector('.msg-value').value)">
                 <input type="hidden" class="msg-value" value="[도환 중1구역 교통 문제 정리 요청]
-도환 중1구역 건설 현장 주변 차량때문에 출퇴근시 교통이 혼잡합니다.
-주민들의 출퇴근에 방해되지 않도록 교통 문제 정리 해주시기 바랍니다." checked>
+도환 중1구역 건설현장 주변 차량때문에 출퇴근시 교통이 혼잡합니다!!
+주민들의 출퇴근에 방해되지 않도록 교통문제 정리해주시기 바랍니다!!" checked>
     
                 <div class="flex items-start justify-between mb-2">
                     <span class="inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded">도환 중1구역 교통 문제 정리 요청</span>
@@ -87,6 +83,26 @@
                 <p class="text-gray-800 font-medium leading-relaxed text-sm whitespace-pre-line">[도환 중1구역 교통 문제 정리 요청]
 도환 중1구역 건설 현장 주변 차량때문에 출퇴근시 교통이 혼잡합니다.
 주민들의 출퇴근에 방해되지 않도록 교통 문제 정리 해주시기 바랍니다.
+                </p>
+            </div>
+            <!-- 옵션 3: 효성중공업 소음분진 -->
+            <!-- [수정됨] data-card-id="noise_dust" 추가 -->
+            <div class="message-card relative block border-2 border-gray-200 rounded-xl p-5 cursor-pointer hover:border-blue-300 transition-all bg-white group" 
+                 data-card-id="traffic_safety_management"
+                 onclick="sendSMS(this.querySelector('.msg-value').value)">
+                <input type="hidden" class="msg-value" value="[도환 중1구역 교통 안전 관리 요청]
+하늘채 1단지 정문에서 공사 트럭의 불법 유턴으로 차량 교통사고 위험이 있습니다!
+차량 유도인력 배치가 허술하고 성남시의 지도이후 개선 사항이 없습니다!!
+보행자 및 교통 안전 관리 해주시기 바랍니다!!" checked>
+    
+                <div class="flex items-start justify-between mb-2">
+                    <span class="inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded">도환 중1구역 교통 안전 관리 요청</span>
+                    <i class="fas fa-chevron-right text-gray-300 group-hover:text-blue-500 transition-colors"></i>
+                </div>
+                <p class="text-gray-800 font-medium leading-relaxed text-sm whitespace-pre-line">[도환 중1구역 교통 안전 관리 요청]
+하늘채 1단지 정문에서 공사 트럭의 불법 유턴으로 차량 교통사고 위험이 있습니다!
+차량 유도인력 배치가 허술하고 성남시의 지도이후 개선 사항이 없습니다!!
+보행자 및 교통 안전 관리 해주시기 바랍니다!!
                 </p>
             </div>
         </div> 
